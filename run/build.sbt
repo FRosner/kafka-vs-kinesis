@@ -6,7 +6,8 @@ lazy val root = (project in file("."))
     name := "run",
     resolvers += Resolver.bintrayRepo("cakesolutions", "maven"),
     libraryDependencies ++= List(
-        "net.cakesolutions" %% "scala-kafka-client" % "1.1.0",
-        "net.cakesolutions" %% "scala-kafka-client-akka" % "1.1.0"
+      "net.cakesolutions" %% "scala-kafka-client" % "1.1.0",
+      "net.cakesolutions" %% "scala-kafka-client-akka" % "1.1.0",
+      "com.typesafe.akka" %% "akka-stream-kafka" % "0.20"
     )
   )
