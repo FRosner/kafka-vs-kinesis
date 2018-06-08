@@ -8,6 +8,7 @@ lazy val root = (project in file("."))
     libraryDependencies ++= List(
       "net.cakesolutions" %% "scala-kafka-client" % "1.1.0",
       "net.cakesolutions" %% "scala-kafka-client-akka" % "1.1.0",
-      "com.typesafe.akka" %% "akka-stream-kafka" % "0.20"
+      "com.typesafe.akka" %% "akka-stream-kafka" % "0.20",
+      "com.lightbend.akka" %% "akka-stream-alpakka-kinesis" % "0.19"
     )
   )
