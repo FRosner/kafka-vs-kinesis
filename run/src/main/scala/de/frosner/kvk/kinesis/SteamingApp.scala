@@ -63,7 +63,6 @@ object SteamingApp extends App {
   val sink: Sink[PutRecordsRequestEntry, NotUsed] =
     KinesisSink(streamName, flowSettings)
 
-  val now = System.currentTimeMillis()
   val doneProducing = Source(1 to 100)
     .map(_.toString)
     .map { elem =>
@@ -73,7 +72,6 @@ object SteamingApp extends App {
       entry
     }
     .runWith(sink)
-  println(s"Produced in ${System.currentTimeMillis() - now} ms")
 
   val doneConsuming =
     source
